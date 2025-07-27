@@ -1,7 +1,7 @@
 import React from 'react';
 import ListCard from '../components/ListCard';
 import { useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next'; // <--- Añadido
+import { useTranslation } from 'react-i18next';
 
 const mockLocations = [
   { id: 1, title: 'Aula 101', subtitle: 'Edificio A' },
@@ -11,7 +11,7 @@ const mockLocations = [
 
 export default function LocationsList() {
   const nav = useNavigate();
-  const { t } = useTranslation(); // <--- Añadido
+  const { t } = useTranslation();
 
   return (
     <main className="container mx-auto py-8">
@@ -25,6 +25,8 @@ export default function LocationsList() {
           subtitle={loc.subtitle}
           onView={() => nav(`/locations/${loc.id}`)}
           onEdit={() => nav(`/locations/${loc.id}/edit`)}
+          viewLabel={t('view')}         
+          editLabel={t('edit')}         
         />
       ))}
     </main>

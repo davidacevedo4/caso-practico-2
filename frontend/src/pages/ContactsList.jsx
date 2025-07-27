@@ -25,6 +25,8 @@ export default function ContactsList() {
           subtitle={ct.subtitle}
           onView={() => nav(`/contacts/${ct.id}`)}
           onEdit={() => nav(`/contacts/${ct.id}/edit`)}
+          viewLabel={t('view')}      
+          editLabel={t('edit')}
         />
       ))}
     </main>
