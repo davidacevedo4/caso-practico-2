@@ -30,3 +30,4 @@ export default function ListCard({ title, subtitle, onView, onEdit }) {
     </div>
   );
 }
+
